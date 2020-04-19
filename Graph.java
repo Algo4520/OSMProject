@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 
@@ -44,7 +43,7 @@ public class Graph{
 			Node CurrVert = new Node();
 			CurrVert.num = edges[i].getSource();
 			CurrVert.weight = edges[i].getDistance();
-			graph.get(edges[i].getDestination()).add(NextVert);
+			graph.get(edges[i].getDestination()).add(CurrVert);
 		}
 	}
 }
