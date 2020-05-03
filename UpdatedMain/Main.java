@@ -69,30 +69,27 @@ public class Main {
 		Scanner sc = new Scanner(System.in);
 
 		// start point
-
-		System.out.println("Please enter your starting latitude"); // I was using 32.075874 (should get 32.0747743)
+		// some test points (32.075874,-81.094446) (32.055884,-81.073379), (32.077202,-81.091510) and (32.059971,-81.093227)
+		System.out.println("Please enter your starting latitude"); 
 		double startLat = sc.nextDouble();
+		
 		System.out.println("Please enter your starting longitude"); // I was using -81.094446 (should get -81.0935174)
 		double startLong = sc.nextDouble();
 
 		// double startLat = 32.075874;
 		// double startLong = -81.094446;
 		int startVertex = findEndpoint(startLong, startLat, vertices, THRESHOLD);
-		// int startVertex = 2195;
+		
 
 		// Destination
 
-		System.out.println("Please enter your destination latitude"); // I was using 32.077202 (should get 32.0763728)
+		System.out.println("Please enter your destination latitude"); 
 		double destLat = sc.nextDouble();
-		System.out.println("Please enter your destination longitude"); // I was using -81.091510 (should get
+		System.out.println("Please enter your destination longitude"); 
 																		// -81.0904602)
 		double destLong = sc.nextDouble();
 
-		// double destLat = 32.077202;
-		// double destLong = -81.091510;
-
 		int destVertex = findEndpoint(destLong, destLat, vertices, THRESHOLD);
-		// int destVertex = 2176;
 
 		Graph graph = new Graph();
 		graph.makeGraph(edges, vertices);
